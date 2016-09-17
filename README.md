@@ -1,3 +1,6 @@
+This is a simple calculator that only has basic four functions. The calculator is based on Django framework and use GET method to generate requests. The calculator uses the default url (http://localhost:8000) as its main page.
+
+
 
 #Corner Case Logics
 1.If one operator is following another operator, I just simly ignore the second operator. If a use types a series of operators, the calculator will only consider the first operator.
