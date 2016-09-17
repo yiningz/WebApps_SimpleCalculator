@@ -1,12 +1,5 @@
-To turn in homework 2, create files (and subdirectories if needed) in
-this directory, add and commit those files to your cloned repository,
-and push your commit to your bare repository on GitHub.
 
-Add any general notes or instructions for the TAs to this README file.
-The TAs will read this file before evaluating your work.
-
-
-#Corner Case
+#Corner Case Logics
 1.If one operator is following another operator, I just simly ignore the second operator. If a use types a series of operators, the calculator will only consider the first operator.
 
 
