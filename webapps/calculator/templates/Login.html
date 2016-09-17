@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="/static/myCss.css" rel="stylesheet">
+    <title>My Calculator</title>
+  </head>
+<body>
+
+
+
+<form action="/templates/Login.html" method="get" >
+
+<table>
+<tr>
+  <td colspan="4">
+  <p>Calculator</p>
+</td>
+  
+<tr>
+<td colspan="4">
+  {%if error%}
+  <input type="text" readonly value={{error}}>
+  {%elif display%}
+  <input type="text" readonly value={{display}}>
+  {%elif num2%}
+  <input type="text" readonly value={{num2}}>
+  {%elif num1%}
+  <input type="text" readonly value={{num1}}>
+  {%else%}
+  <input type="text" readonly value='0'>
+  {% endif %}
+  </td>
+</tr>
+  <tr>
+    <td><input type="submit" name="num" value="7" class="number"></td>
+    <td><input type="submit" name="num" value="8" class="number"></td>
+    <td><input type="submit" name="num" value="9" class="number"></td>
+    <td><input type="submit" name="operator" value="+" class="operator"></td>
+  </tr>
+  <tr>
+    <td><input type="submit" name="num" value="4" class="number"></td>
+    <td><input type="submit" name="num" value="5" class="number"></td>
+    <td><input type="submit" name="num" value="6" class="number"></td>
+    <td><input type="submit" name="operator" value="-" class="operator"></td>
+  </tr>
+  <tr>
+    <td><input type="submit" name="num" value="1" class="number"></td>
+    <td><input type="submit" name="num" value="2" class="number"></td>
+    <td><input type="submit" name="num" value="3" class="number"></td>
+    <td><input type="submit" name="operator" value="&times" class="operator"></td>
+  </tr>
+  <tr>
+    <td colspan="2"><input type="submit" name="num" value="0" class="number"></td>
+    <td><input type="submit" name="equals" value='=' class="operator"></td>
+    <td><input type="submit" name="operator" value="&divide" class="operator"></td>
+  </tr>
+  <tr>
+    {%if num1 %}
+    <td><input type="hidden" name = "num1" value= {{num1}}></td>
+    {%else%}
+    <td><input type="hidden" name = "num1" value= ""></td>
+    {% endif %}
+    {%if op %}
+    <td><input type="hidden" name = "op" value= {{op}}></td>
+    {%else%}
+    <td><input type="hidden" name = "op" value= ""></td>
+    {% endif %}
+    {%if num2%}
+    <td><input type="hidden" name = "num2" value= {{num2}}></td>
+    {%else%}
+    <td><input type="hidden" name = "num2" value= ""></td>
+    {% endif %}
+    {%if display%}
+    <td><input type="hidden" name = "display" value= {{display}}></td>
+    {%else%}
+    <td><input type="hidden" name = "display" value= ""></td>
+    {% endif %}
+    {%if error%}
+    <td><input type="hidden" name = "error" value= {{error}}></td>
+    {%else%}
+    <td><input type="hidden" name = "error" value= ""></td>
+    {% endif %}
+  </tr>
+
+</table>
+</form>
+
+
+</body>
+</html>
+
